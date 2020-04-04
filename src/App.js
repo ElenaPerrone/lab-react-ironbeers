@@ -15,7 +15,7 @@ class App extends Component {
         </Switch>
         <Route path="/beers" component={Navbar} />
         <Switch>
-          <Route path="/beers/details" component={BeerDetails} />
+          <Route path="/beers/details/:id" component={BeerDetails} />
           <Route path="/beers" component={Beers} />
         </Switch>
       </div>

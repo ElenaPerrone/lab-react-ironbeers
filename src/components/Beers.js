@@ -34,14 +34,13 @@ class Beers extends Component {
             <Card>
               <CardContent>
                 <Link to={`/beers/details/${aBeer._id}`}>
-                  <img src={aBeer.image_url} className="card-icon" alt="" onClick={()=> console.log(aBeer._id)}/>
+                  <img src={aBeer.image_url} className="card-icon" alt=""/>
                 </Link>
                 <h2>{aBeer.name}</h2>
                 <p>{aBeer.tagline}</p>
                 <small>Contributed by: {aBeer.contributed_by}</small>
               </CardContent>
             </Card>
-           {/* <Route path="/beers/details/:id" component={BeerDetails} />  */}
           </div>
         ))}
       </div>

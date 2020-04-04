@@ -12,10 +12,10 @@ class BeerDetails extends Component {
     };
   }
   componentDidMount() {
-
+    let { id } = this.props.match.params
 
     axios
-    .get(`https://ih-beers-api.herokuapp.com/beers/5d4d3bfc720fb89b71e013cf`)
+    .get(`https://ih-beers-api.herokuapp.com/beers/${id}`)
     //   .get(`https://ih-beers-api.herokuapp.com/beers/${this.props._id}`)
       .then(apiResponse => {
         this.setState({
