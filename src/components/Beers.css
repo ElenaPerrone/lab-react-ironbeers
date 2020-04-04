@@ -1,0 +1,14 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-item{
+    display: flex;
+    flex-direction: row;
+
+}
+.card-icon {
+  width: 25vw;
+  height: 45vh;
+}
