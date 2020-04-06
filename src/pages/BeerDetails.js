@@ -8,18 +8,18 @@ class BeerDetails extends Component {
     super(props);
 
     this.state = {
-      beers: []
+      beers: [],
     };
   }
   componentDidMount() {
-    let { id } = this.props.match.params
+    let { id } = this.props.match.params;
 
     axios
-    .get(`https://ih-beers-api.herokuapp.com/beers/${id}`)
-    //   .get(`https://ih-beers-api.herokuapp.com/beers/${this.props._id}`)
-      .then(apiResponse => {
+      .get(`https://ih-beers-api.herokuapp.com/beers/${id}`)
+
+      .then((apiResponse) => {
         this.setState({
-          beers: apiResponse.data
+          beers: apiResponse.data,
         });
         console.log(
           "BeerDetails -> componentDidMount -> beers",
