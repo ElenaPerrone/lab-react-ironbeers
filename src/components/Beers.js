@@ -10,20 +10,18 @@ class Beers extends Component {
     super(props);
 
     this.state = {
-      beers: []
+      beers: [],
     };
   }
 
   componentDidMount() {
-    axios.get("https://ih-beers-api.herokuapp.com/beers").then(apiResponse => {
-      this.setState({
-        beers: apiResponse.data
+    axios
+      .get("https://ih-beers-api.herokuapp.com/beers")
+      .then((apiResponse) => {
+        this.setState({
+          beers: apiResponse.data,
+        });
       });
-      // console.log(
-      //   "Beers -> componentDidMount -> apiResponse",
-      //   this.state.beers
-      // );
-    });
   }
 
   render() {
@@ -34,7 +32,7 @@ class Beers extends Component {
             <Card>
               <CardContent>
                 <Link to={`/beers/details/${aBeer._id}`}>
-                  <img src={aBeer.image_url} className="card-icon" alt=""/>
+                  <img src={aBeer.image_url} className="card-icon" alt="" />
                 </Link>
                 <h2>{aBeer.name}</h2>
                 <p>{aBeer.tagline}</p>
@@ -49,7 +47,3 @@ class Beers extends Component {
 }
 
 export default Beers;
-
-
-
-
